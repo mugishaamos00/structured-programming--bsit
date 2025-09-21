@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MUGI'S SWEET BUNS </title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    
+
+    :root {
+      --accent: #085e6baa;      /* orange burger accent */
+      --bg: #cafae7;         /* warm background */
+      --card: #f1e4e4;          /* card background */
+      --muted: #7d5f5f;
+    }
+
+    /* Reset-ish (very small) */
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Rubik", system-ui, sans-serif; }
+
+    body {
+      background: linear-gradient(180deg, #fffefc 0%, var(--bg) 100%);
+      color: #281b1b;
+      line-height: 1.4;
+      padding: 28px;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo .bun {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #ffd9b3 0%, #f2a55f 60%);
+      /* little sesame dots */
+      box-shadow:
+        6px -6px 0 0 rgba(255,255,255,0.06) inset,
+        -6px 6px 0 0 rgba(255,255,255,0.04) inset;
+      position: relative;
+    }
+    .logo .bun::after {
+      content: "";
+      position: absolute;
+      left: 12px;
+      top: 14px;
+      width: 6px;
+      height: 3px;
+      background: rgba(255,255,255,0.9);
+      border-radius: 2px;
+      transform: rotate(-15deg);
+    }
+
+    h1 {
+      font-size: 20px;
+      letter-spacing: 0.6px;
+    }
+
+    /* Simple nav (beginner might inline some styles later) */
+    nav a {
+      text-decoration: none;
+      color: var(--muted);
+      padding: 8px 10px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    nav a:hover { background: rgba(0, 49, 25, 0.04); color: #10e171; }
+
+    /* Hero area */
+    .hero {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+
+    .hero .left {
+      flex: 1;
+      min-width: 220px;
+    }
+    .hero .right {
+      width: 220px;
+      height: 140px;
+      border-radius: 12px;
+      /* placeholder burger using CSS gradient */
+      background:
+        radial-gradient(circle at 50% 15%, #ffecb8 0 10%, transparent 10%),
+        linear-gradient(#c63 0 0) padding-box,
+        linear-gradient(180deg, #f7b36c, #d95f3b) border-box;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
+
+    .tag {
+      display: inline-block;
+      margin-top: 8px;
+      background: #fff;
+      color: var(--accent);
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(240,90,40,0.12);
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    /* Menu cards */
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 14px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+
+    .card h3 { margin-bottom: 8px; font-size: 16px; }
+    .price {
+      font-weight: 700;
+      color: var(--accent);
+      float: right; 
+    }
+
+    .desc {
+      color: #666;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 12px;
+      background: var(--accent);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+      box-shadow: 0 4px 10px rgba(240,90,40,0.18);
+    }
+
+    
+    footer {
+      margin-top: 28px;
+      text-align: center;
+      color: #666;
+      font-size: 13px;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <div class="bun" aria-hidden="true"></div>
+      <div>
+        <h1>BURGER PALACE👑</h1>
+        <div style="font-size:12px;color:#777;">Fresh • Fast • Friendly</div> 
+      </div>
+    </div>
+
+    <nav>
+      <a href="#menu">MENU</a>
+      <a href="#about">ABOUT</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" role="region" aria-label="Main promo">
+      <div class="left">
+        <h2 style="margin-bottom:6px;">Tasty burgers made simple</h2>
+        <p style="color:#555555;max-width:600px;">
+          We make classic burgers that meet your tummies needs.      
+        </p>
+        <div class="tag">No preservatives • Local ingredients</div>
+      </div>
+
+      <div class="right" aria-hidden="true"></div>
+    </section>
+
+    <section id="menu">
+      <h2 style="margin: 6px 0 12px 0;">Menu</h2>
+
+      <div class="menu">
+        <article class="card">
+          <h3>Classic Burger <span class="price">UGX 10,000</span></h3>
+          <p class="desc">Beef patty, lettuce, tomato, pickles, our special sauce.</p>
+          <a class="btn" href="#order1">Order</a>
+        </article>
+
+        <article class="card">
+          <h3>Cheese Lover <span class="price">UGX 12,000</span></h3>
+          <p class="desc">Double cheese, caramelized onions, ketchup & mayo.</p>
+          <a class="btn" href="#order2" style="background:#19282e;">Order</a>
+        </article>
+
+        <article class="card">
+          <h3>Spicy Chick <span class="price">UGX 11,000</span></h3>
+          <p class="desc">Crispy chicken, spicy mayo, lettuce, and pickled carrots.</p>
+          <a class="btn" href="#order3">Order</a>
+        </article>
+
+        <article class="card">
+          <h3>Veggie Bun <span class="price">UGX 9,000</span></h3>
+          <p class="desc">Grilled veggie patty, avocado, tomato, greens.</p>
+          <a class="btn" href="#order4">Order</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" style="margin-top:18px;">
+      <h2>About Us</h2>
+      <p style="color:#555; margin-top:8px; max-width:700px;">
+        Happy Buns started as a small stall. We believe a good burger doesn't need to be complicated.
+        This site is simple (like our kitchen) — built with love and a little bit of ketchup.
+      </p>
+    </section>
+
+    <section id="contact" style="margin-top:14px;">
+      <h2>Contact</h2>
+      <p style="color:#555; margin-top:6px;">Call: <strong>+256 780 797647</strong> — Visit: Makerere Road, Kampala</p>
+    </section>
+  </main>
+
+  <footer>
+    <small>&copy; <span id="yr"></span> Happy Buns Burger — Made with ❤️</small>
+  </footer>
+
+  <script>
+   
+    document.getElementById('yr').textContent = new Date().getFullYear();//sets date and time automatically
+
+
+    document.querySelectorAll('.btn').forEach(function(b){
+      b.addEventListener('click', function(e){
+        e.preventDefault();
+        
+        alert('Thanks! We received your order request. (This is a demo.)');
+      });
+    });
+  </script>
+</body>
+</html>
