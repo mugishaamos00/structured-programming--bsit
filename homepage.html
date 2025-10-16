@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8; 
+      color: #333;
+    }
+    h1 {
+      color: #0d6efd;
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .btn-primary {
+      background-color: #0d6efd;
+      border-color: #0d6efd;
+    }
+    .btn-primary:hover {
+      background-color: #0b5ed7;
+      border-color: #0a58ca;
+    }
+    navbar-brand {
+      font-weight: bold;
+      font-size: 24px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="homepage.html">My Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="homepage.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Home Section -->
+<div class="container text-center mt-5">
+  <img src="mugisha pic.jpg" alt="My Photo" class="rounded-circle mb-3 shadow-lg border border-4 border-primary" width="180" height="180" style="object-fit:cover;">
+  <h1>welcome, I'm Mugisha Amos</h1>
+  <p>Welcome to my personal portfolio website. I'm a web developer who loves creating and developing websites and mobile applications.</p>
+  <a href="projects.html" class="btn btn-primary">View My Work</a>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-center text-white mt-5 p-3">
+  <p>&copy; 2025 Mugisha Amos. All rights reserved.</p>
+</footer>
+
+
+<!-- Welcome Message javaScript -->
+<script>
+  // Ask for the user's name
+  let name = prompt("Welcome! Please enter your name:");
+  // Show a welcome message on the page
+  if (name && name.trim() !== "") {
+    alert("Welcome to my portofolio, " + name + "!");
+  } else {
+    alert("Welcome to my portofolio website, Guest!");
+  }
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
